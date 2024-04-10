@@ -3,7 +3,7 @@ import { useState } from "react";
 export function CreateTodo(){
     const [title,setTitle]=useState("");
     const [description,setDescription]=useState("");
-    return <div>
+    return <div className="parent">
         <input type="text"placeholder="title"  onChange={function(e){
             const value = e.target.value;
             setTitle(value);

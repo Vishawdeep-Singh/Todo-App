@@ -1,12 +1,12 @@
 export function Todos({ todos }) {
 
-    return <div>
+    return <div className="main-todos">
         {todos.map(function (todo) {
-            return <div>
+            return <div className="todo1">
                 <h1>{todo.title}</h1>
                 <h2>{todo.description}</h2>
 
-                <button onClick={() => { markas(todo._id) }}>{todo.completed == true ? "Completed" : "Mark as completed"}</button>
+                <button className="todo-button" onClick={() => { markas(todo._id) }}>{todo.completed == true ? "Completed" : "Mark as completed"}</button>
             </div>               // here we use double function because stop it from executing infinitely.thats why we passing referece of markas
         })}
     </div>
